@@ -8,7 +8,7 @@
 const double NUM_C = 2 / sqrt(5);
 const double PI = 3.141592653589793;
 const double RAD = 180 / PI;
-
+//added comment for github
 class Error {
 public:
     Error(int par) : val(par) {}
@@ -21,7 +21,7 @@ public:
         if (A < 0 || A1 < 0 || A2 < 0 || A3 < 0) throw Error(0);
         if (A <= A2 + A3 || A <= A1 + A2 * NUM_C || A <= A1 + A3 * NUM_C) throw Error(1);
     }
-    
+
     double GetA () const;
     double GetA1 () const;
     double GetA2 () const ;
@@ -40,7 +40,7 @@ public:
     bool IsInside (const CMy2DPoint& point) const;
     bool IsInside (double x, double y) const;
     friend std::ostream& operator << (std::ostream& out, const CMy2DObjectB1& obj);
-    
+
 private:
     double A, A1, A2, A3;
     CMy2DPoint m_centre;
